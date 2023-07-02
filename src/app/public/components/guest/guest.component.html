@@ -1,0 +1,32 @@
+<div>
+    <mat-card>
+        <mat-card-title>Guest</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="showList()">
+                <mat-form-field>
+                    <input #item type="text" matInput placeholder="Nickname" formControlName="login">
+                    <mat-error *ngIf="this.loginForm.get('login')?.touched && this.loginForm.get('login')?.hasError('required')">
+                        Nickname is required</mat-error>
+                </mat-form-field>
+                <div class="button">
+                    <div class="left-buttons">
+                        <button mat-button [routerLink]="['../login']">Log in</button>
+                        <button mat-button [routerLink]="['../register']">Sing up</button>
+                      </div>
+                    <button type="submit" mat-button [disabled]="!loginForm.valid">Search</button>
+                </div>
+                <ul class="friend-list">
+                    <li *ngFor="let friend of friends" [style.background-color]="getColor(friend.remains)">
+                      <div class="info">
+                        <span class="name">{{ friend.name }} {{ friend.surname }}</span>
+                        <span class="birth">Birth: {{ friend.birth | date }}</span>
+                      </div>
+                      <span class="remains">Remains: {{ friend.remains }}</span>
+                    </li>
+                  </ul>
+            </form>
+        </mat-card-content>
+        <mat-error *ngIf="!isExist">Nickname is not exist or is private</mat-error>
+    </mat-card>
+    
+</div>

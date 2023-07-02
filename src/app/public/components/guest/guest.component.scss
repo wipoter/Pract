@@ -1,0 +1,110 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+
+mat-card {
+    max-width: 600px;
+  
+    mat-card-title,
+    mat-card-content {
+      display: flex;
+      justify-content: center;
+  
+      form {
+        .mat-form-field {
+          width: 100%;
+          min-width: 300px;
+        }
+  
+        .error {
+          padding: 16px;
+          width: 300px;
+          color: white;
+          background-color: red;
+        }
+  
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .left-buttons {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .friend-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .friend-list li {
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .friend-list .info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .friend-list .name {
+    font-weight: normal;
+  }
+  
+  .friend-list .birth {
+    font-style: italic;
+  }
+  
+  .friend-list .remains {
+    font-size: 14px;
+  }
+  
+  .friend-list .green {
+    background-color: #b4e051;;
+  }
+  
+  .friend-list .red {
+    background-color: #f56c6c;
+  }
+  
+  .friend-list .gradient {
+    background-image: linear-gradient(to right, #b4e051, #fde74c, #f56c6c);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    transition: background-position 0.5s ease;
+  }
+  
+  .friend-list .gradient:hover {
+    background-position: left center;
+  }
